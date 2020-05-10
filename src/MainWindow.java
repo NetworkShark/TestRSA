@@ -59,11 +59,11 @@ public class MainWindow extends JFrame implements ActionListener {
 		encriptedText = new JTextArea();
 		encriptedText.setPreferredSize(new Dimension(textAreaWidth, textAreaHeight));
 		encriptedText.setBorder(BorderFactory.createLineBorder(Color.gray, 2));
-		encriptedText.setText("encriptedText");
+		encriptedText.setText("Type Encripted MIME Text for Decript");
 		decriptedText = new JTextArea();
 		decriptedText.setPreferredSize(new Dimension(textAreaWidth, textAreaHeight));
 		decriptedText.setBorder(BorderFactory.createLineBorder(Color.gray, 2));
-		decriptedText.setText("MethAtroN");
+		decriptedText.setText("Type Text to Encript");
 		
 		generateRSAKeysButton = new JButton("Gen. RSA Keys");
 		generateRSAKeysButton.setActionCommand("generateRSAKeysbutton");
@@ -90,11 +90,11 @@ public class MainWindow extends JFrame implements ActionListener {
 		privateKey = new JTextArea();
 		privateKey.setPreferredSize(new Dimension(textAreaWidth, textAreaHeight));
 		privateKey.setBorder(BorderFactory.createLineBorder(Color.gray, 2));
-		privateKey.setText("privateKey");
+		privateKey.setText("Type Private Key Here");
 		publicKey = new JTextArea();
 		publicKey.setPreferredSize(new Dimension(textAreaWidth, textAreaHeight));
 		publicKey.setBorder(BorderFactory.createLineBorder(Color.gray, 2));
-		publicKey.setText("publicKey");
+		publicKey.setText("Type Public Key Here");
 		
 		JPanel textContainer = new JPanel(new BorderLayout(5, 5));
 		textContainer.add(encriptedText, BorderLayout.NORTH);
