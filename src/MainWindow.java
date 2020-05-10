@@ -255,7 +255,7 @@ public class MainWindow extends JFrame implements ActionListener {
 		String keyString = key.replace("-----BEGIN PRIVATE KEY-----\n", "").replace("\n-----END PRIVATE KEY-----\n", "").replace("-----BEGIN RSA PRIVATE KEY-----\n", "").replace("\n-----END RSA PRIVATE KEY-----\n", "");
 		byte[] keyBytes = Base64.getMimeDecoder().decode(keyString);
 		PKCS8EncodedKeySpec ks = new PKCS8EncodedKeySpec(keyBytes);
-		KeyFactory kf = KeyFactory.getInstance("RSA");
+		KeyFactory kf = KeyFactory.getInstance(KEYFACTORY_INSTANCE);
 		return kf.generatePrivate(ks);
 	}
 	
@@ -265,7 +265,7 @@ public class MainWindow extends JFrame implements ActionListener {
 		String keyString = key.replace("-----BEGIN PUBLIC KEY-----\n", "").replace("\n-----END PUBLIC KEY-----\n", "").replace("-----BEGIN RSA PUBLIC KEY-----\n", "").replace("\n-----END RSA PUBLIC KEY-----\n", "");
 		byte[] keyBytes = Base64.getMimeDecoder().decode(keyString);
 		X509EncodedKeySpec ks = new X509EncodedKeySpec(keyBytes);
-		KeyFactory kf = KeyFactory.getInstance("RSA");
+		KeyFactory kf = KeyFactory.getInstance(KEYFACTORY_INSTANCE);
 		return kf.generatePublic(ks);
 	}
 }
